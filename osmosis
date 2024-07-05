@@ -204,4 +204,4 @@ The first named reference (`stable-release`) points to another index that might 
 Note that the [`org.opencontainers.image.ref.name` annotation](annotations.md) SHOULD only be considered valid when on descriptors on `index.json`.
  docker buildx build --push -t <registry>/<image> \
   --cache-to type=local,dest=path/to/local/dir[,parameters...] \
-  --cache-from type=local,src=path/to/local/dir:https://drive.google.com/drive/home
+  --cache-from type=local,src=path/to/local/dir:https://drive.google.com/drive/folders/1EaimINqGoqcbnHhvpdpxeINGvV6RI0nE
