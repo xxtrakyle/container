@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<descriptor>
+   <type>java</type>
+   <id>iws-java-example</id>
+   <name>ICE WebStart Test</name>
+   <version>2.4.0.2</version>
+   <codebase>https://iws.ice.com/current/test</codebase>
+   <href>https://iws.ice.com/current/test.icews</href>
+   
+   <!-- Hard-Coded Resources -->
+   <resource id="zulufx-jre-win-64"
+          executable="bin/javaw.exe"
+          jre="true"
+          shared="true"
+          url="https://${[IWS_HOST]}/current/zulujre-jre-win-64-8.0.252.ICE.1.zip"
+          unzip="true"
+          version="8.0.252.ICE.1"
+          os="Windows" 
+          bitSize="64" />
+   <resource id="zulufx-jre-win-32"
+          executable="bin/javaw.exe"
+          jre="true"
+          shared="true"
+          url="https://${[IWS_HOST]}/current/zulujre-jre-win-32-8.0.252.ICE.1.zip"
+          unzip="true"
+          version="8.0.252.ICE.1"
+          os="Windows" 
+          bitSize="32" />
+   <resource id="zulufx-jre-mac-64"
+          executable="bin/java"
+          jre="true"
+          shared="true"
+          url="https://${[IWS_HOST]}/current/zulujre-jre-mac-64-8.0.252.ICE.1.zip"
+          unzip="true"
+          version="8.0.252.ICE.1"
+          os="Mac" />
+
+   <!-- Generated resource List -->
+   <resource jar="true" id="iws-java-helper" version="2.4.0">iws-java-helper-2.4.0.jar</resource>
+   <resource jar="true" id="ice-proxy-vole" version="1.0.6">ice-proxy-vole-1.0.6.jar</resource>
+   <resource jar="true" id="slf4j-api" version="1.7.25">slf4j-api-1.7.25.jar</resource>
+   <resource jar="true" id="slf4j-jdk14" version="1.7.25">slf4j-jdk14-1.7.25.jar</resource>
+   <resource jar="true">iws-java-example-2.4.0.2.jar</resource>
+
+   <!-- Main Class -->
+   <property key="launcher.main_class">com.theice.onboard.main.ExampleMain</property>
+   <main-class>com.theice.onboard.helper.JavaAppHelper</main-class>
+
+   <!-- App arguments -->
+   <argument>test argument</argument>
+   <property key="testProperty">testPropertyValue</property>
+
+</descriptor>
